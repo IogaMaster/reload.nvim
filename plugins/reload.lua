@@ -1,1 +1,1 @@
-require("reload")
+require("reload").setup()

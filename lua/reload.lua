@@ -8,9 +8,12 @@ function M.reload()
     ]]
 end
 
--- Ignore setup, it just does a simple command
-vim.api.nvim_create_user_command("Reload", function()
-    M.reload()
-end, {})
+function M.setup(opts)
+    opts = opts or {}
+    M.config = vim.tbl_deep_extend("force", config_defaults, opts)
+    vim.api.nvim_create_user_command("Reload", function()
+        M.reload()
+    end, {})
+end
 
 return M
