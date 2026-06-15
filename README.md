@@ -22,24 +22,20 @@
    </h1>
    <br>
 
-`reload.nvim` is a window wrapper around the [reload](https://github.com/webstonehq/reload/) tui application.
-This plugin is like [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim), but for reload.
+`reload.nvim` is a simple plugin that makes hot reloads your neovim instance, saving your session.
 
 ## 📦 Installation and Usage
 
 Include the repo with your favorite package manager.
 
-After that setup will be automatically called, then you can either call the `:Tuxedo` command.
+After that setup will be automatically called, then you can either call the `:Reload` command.
 Or run `require("reload").reload()`.
 
 ## Config
 
 ```lua
-require('reload').setup {
-	create_todo_file = true,
-	width_ratio = 0.95,
-	height_ratio = 0.80,
-}
+-- There are no config options yet, I can't think of any
+require('reload').setup()
 ```
 
 
